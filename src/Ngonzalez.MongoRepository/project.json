@@ -1,0 +1,15 @@
+﻿{
+  "version": "1.0.1",
+  "description": "Ngonzalez.MongoRepository Class Library",
+  "authors": [ "" ],
+  "tags": [ "" ],
+  "projectUrl": "",
+  "licenseUrl": "",
+  "dependencies": {
+        "mongocsharpdriver": "2.2.0",
+        "Ix-Async": "1.2.5"
+    },
+  "frameworks": {
+    "dnx451": { }
+  }
+}
