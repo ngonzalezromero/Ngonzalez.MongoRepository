@@ -14,5 +14,6 @@ namespace Ngonzalez.MongoRepository
         Task<T> Single(Func<T, bool> expression);
         Task<List<T>> All();
         Task Delete(string field, string value);
+        Task<PagingResult<T>> Paging(Func<T, bool> condition, Func<T, object> order, bool orderDescending, int pageIndex, int pageSize);
     }
 }

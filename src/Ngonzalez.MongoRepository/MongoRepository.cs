@@ -60,6 +60,16 @@ namespace Ngonzalez.MongoRepository
         {
             return _collection.AsQueryable().ToListAsync();
         }
+     
+         public async Task<PagingResult<T>> Paging(Func<T, bool> condition, Func<T, object> order, bool orderDescending, int pageIndex, int pageSize)
+        {
+            var list = _collection.AsQueryable().ToAsyncEnumerable().Where(condition);
+            list = orderDescending ? list.OrderByDescending(order) : list.OrderBy(order);
+            var paging =new PagingResult<T>();
+            paging.List =await list.Skip(pageIndex).Take(pageSize).ToList();
+            return paging;
+        }
 
+     
     }
 }
