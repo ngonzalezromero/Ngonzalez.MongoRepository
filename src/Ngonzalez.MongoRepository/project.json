@@ -1,15 +1,23 @@
 ﻿{
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Ngonzalez.MongoRepository Class Library",
-  "authors": [ "" ],
-  "tags": [ "" ],
-  "projectUrl": "",
-  "licenseUrl": "",
+  "authors": [
+    "Nicolas Gonzalez (ngonzalezromero@gmail.com)"
+  ],
+  "packOptions": {
+    "tags": [
+      "mongoDb,net451"
+    ]
+  },
   "dependencies": {
-        "mongocsharpdriver": "2.2.0",
-        "Ix-Async": "1.2.5"
-    },
+    "mongocsharpdriver": "2.2.4",
+    "Ix-Async": "1.2.5"
+  },
   "frameworks": {
-    "dnx451": { }
+    "net451": {
+      "dependencies": {
+        "System.Runtime": "4.1.0-rc2-24027"
+      }
+    }
   }
 }
